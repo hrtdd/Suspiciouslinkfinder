@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0f172a;
+  --color-bg-card: rgba(15, 23, 42, 0.6);
+  --color-neon-blue: #38bdf8;
+  --color-neon-red: #f87171;
+  --color-neon-green: #4ade80;
+  --color-border-glass: rgba(148, 163, 184, 0.12);
+  --font-sans: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(248, 113, 113, 0.04), transparent);
+  color: #e2e8f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Glow utility for Scan button */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5), 0 0 40px rgba(56, 189, 248, 0.2);
+}
+.glow-blue:hover {
+  box-shadow: 0 0 28px rgba(56, 189, 248, 0.7), 0 0 56px rgba(56, 189, 248, 0.3);
+}
